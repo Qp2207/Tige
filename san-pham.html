@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f9f8f4">
+  <title>Sản phẩm | Nếp Studio</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="assets/products.js"></script>
+  <script defer src="assets/store.js"></script>
+</head>
+<body data-page="product">
+  <a class="skip-link" href="#main">Đến nội dung</a>
+  <header class="site-header" id="site-header"></header>
+  <main class="shell subpage" id="main">
+    <nav class="breadcrumb" aria-label="Đường dẫn">
+      <a href="index.html#danh-muc">Sản phẩm</a>
+      <span id="breadcrumb-category" hidden><span aria-hidden="true">/</span> <a></a></span>
+      <span id="breadcrumb-code" hidden><span aria-hidden="true">/</span> <span aria-current="page"></span></span>
+    </nav>
+    <section class="product-detail" id="product-detail" aria-labelledby="product-name" hidden>
+      <div class="detail-photo"><img width="512" height="512" alt=""></div>
+      <div class="detail-copy">
+        <p id="product-code" class="product-code"></p>
+        <h1 id="product-name"></h1>
+        <p id="product-price" class="detail-price"></p>
+        <p id="product-description" class="detail-description"></p>
+        <dl class="product-specs">
+          <div><dt>Màu sắc</dt><dd id="product-color"></dd></div>
+          <div><dt>Chất liệu</dt><dd id="product-material"></dd></div>
+          <div><dt>Kích cỡ</dt><dd id="product-sizes"></dd></div>
+        </dl>
+        <a class="button button-primary" id="store-link" hidden>Xem nơi bán <span class="arrow-up" aria-hidden="true"></span></a>
+      </div>
+    </section>
+    <div id="product-missing" class="empty" hidden>
+      <h1>Không tìm thấy sản phẩm</h1>
+      <a class="button button-secondary" href="index.html#danh-muc">Xem tất cả sản phẩm</a>
+    </div>
+    <noscript><p class="empty">Hãy bật JavaScript để xem sản phẩm.</p></noscript>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+</body>
+</html>
