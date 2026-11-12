@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Khám phá áo và quần tại Nếp Studio. Tìm mẫu theo mã sản phẩm và chọn kích cỡ phù hợp.">
+  <meta name="theme-color" content="#f9f8f4">
+  <title>Nếp Studio | Quần áo hằng ngày</title>
+  <link rel="stylesheet" href="assets/giao-dien/styles.css">
+  <script defer src="assets/san-pham/ao.js"></script>
+  <script defer src="assets/san-pham/quan.js"></script>
+  <script defer src="assets/giao-dien/store.js"></script>
+</head>
+<body data-page="catalog">
+  <a class="skip-link" href="#main">Đến nội dung</a>
+  <header class="site-header" id="site-header"></header>
+  <main class="shell home-main" id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title">Mặc đẹp<br>mỗi ngày.</h1>
+        <p>Áo và quần phom thoải mái,<br>màu dễ phối cho ngày thường.</p>
+        <a class="button button-primary" href="#danh-muc">Xem sản phẩm <span class="arrow-up" aria-hidden="true"></span></a>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/giao-dien/hero.webp" alt="Hai người mẫu phối áo thun tối giản với quần ống rộng" width="1440" height="960" fetchpriority="high">
+      </div>
+    </section>
+
+    <section class="catalog" id="danh-muc" aria-labelledby="catalog-title">
+      <div class="catalog-heading">
+        <h2 id="catalog-title">Sản phẩm</h2>
+        <form class="search-form" role="search">
+          <label class="visually-hidden" for="search">Tìm theo mã sản phẩm</label>
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.65" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4" stroke-linecap="round"/></svg>
+          <input id="search" name="ma" type="search" placeholder="Tìm mã, ví dụ A01" autocomplete="off" maxlength="40">
+        </form>
+      </div>
+      <div class="catalog-controls">
+        <nav class="filters" aria-label="Lọc sản phẩm">
+          <a data-filter="all" href="index.html#danh-muc">Tất cả</a>
+          <a data-filter="quan" href="index.html?loai=quan#danh-muc">Quần</a>
+          <a data-filter="ao" href="index.html?loai=ao#danh-muc">Áo</a>
+        </nav>
+        <p id="result-count" class="result-count" role="status"></p>
+      </div>
+      <div class="products" id="products"></div>
+      <div class="empty" id="no-results" hidden>
+        <h3>Không tìm thấy sản phẩm</h3>
+        <p>Hãy thử mã khác hoặc xem toàn bộ sản phẩm.</p>
+        <a class="button button-secondary" href="index.html#danh-muc">Xem tất cả</a>
+      </div>
+      <noscript><p class="empty">Hãy bật JavaScript để xem và tìm sản phẩm.</p></noscript>
+    </section>
+
+    <template id="product-card">
+      <article>
+        <a class="product-card">
+          <div class="product-photo"><img width="512" height="512" decoding="async" alt=""></div>
+          <div class="product-meta">
+            <span class="product-code"></span>
+            <span class="card-arrow arrow-up" aria-hidden="true"></span>
+            <h3></h3>
+            <p class="product-price"></p>
+          </div>
+        </a>
+      </article>
+    </template>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+</body>
+</html>
